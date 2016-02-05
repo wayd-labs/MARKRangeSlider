@@ -151,7 +151,7 @@ static NSString * const kMARKRangeSliderTrackRangeImage = @"rangeSliderTrackRang
         trackX += leftInset;
         trackWidth -= leftInset + rightInset;
     }
-    self.trackImageView.frame = CGRectMake(trackX, trackY, trackWidth, trackHeight);
+    self.trackImageView.frame = CGRectMake(trackX + self.leftThumbImageInset, trackY, trackWidth - self.leftThumbImageInset - self.rightThumbImageInset, trackHeight);
 
     // Set range frame
     CGFloat rangeWidth = rightX - leftX;
